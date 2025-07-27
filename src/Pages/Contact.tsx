@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Contact = () => (
     <div className="flex flex-col items-center gap-72 px-72-128 bg-red-dark">
         <div className="flex flex-col items-center gap-24 align-stretch">

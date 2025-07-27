@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Gallery = () => (
     <div className="flex px-72-128 flex-col items-center gap-72 bg-red-dark">
         <div className="flex flex-col gap-24">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Highlights = () => {
     return (
         <div className="flex px-72-128 flex-col items-center gap-72 bg-red-dark">

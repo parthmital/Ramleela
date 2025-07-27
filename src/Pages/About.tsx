@@ -1,5 +1,3 @@
-import React from 'react';
-
 const About = () => (
     <div className="flex px-72-128 flex-col gap-72 bg-white">
         <div className="flex flex-col items-center gap-24">

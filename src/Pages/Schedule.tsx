@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Schedule = () => {
     return (
         <div className="flex px-72-128 flex-col gap-72 bg-white">

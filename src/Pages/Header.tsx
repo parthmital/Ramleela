@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Header = () => (
     <div className="flex px-16-72 justify-between borderb-4-gold bg-red-dark">
         <div className="flex items-center gap-12">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => (
     <div className="flex px-72-128 flex-col items-center gap-24 bg-red-dark">
         <div className="flex items-center gap-16">
