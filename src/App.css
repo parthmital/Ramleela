@@ -450,6 +450,7 @@
     background: var(--color-gold);
     transform: scale(1.05);
     transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 1.5px 4px 0 rgba(0,0,0,0.2);
 }
 
 .Button:hover * {
@@ -462,6 +463,7 @@
     cursor: pointer;
     transform: scale(1.025);
     transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 1.5px 4px 0 rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {

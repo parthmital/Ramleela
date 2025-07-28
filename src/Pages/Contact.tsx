@@ -271,7 +271,7 @@ const Contact = () => (
                     </p>
                 </div>
                 <div className="flex w-300 h-48 justify-center items-center gap-24">
-                    <svg className="Hover"
+                    <svg
                         fill="none"
                         height={48}
                         viewBox="0 0 48 48"
@@ -294,7 +294,7 @@ const Contact = () => (
                             </clipPath>
                         </defs>
                     </svg>
-                    <svg className="Hover"
+                    <svg
                         fill="none"
                         height={48}
                         viewBox="0 0 48 48"
@@ -346,7 +346,7 @@ const Contact = () => (
                             </clipPath>
                         </defs>
                     </svg>
-                    <svg className="Hover"
+                    <svg
                         fill="none"
                         height={48}
                         viewBox="0 0 68 48"
