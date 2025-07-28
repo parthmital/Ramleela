@@ -156,7 +156,7 @@ const Highlights = () => {
                                 <p className="text-red-dark text-center text-24 font-bold">
                                     {item.title}
                                 </p>
-                                <p className="text-black text-center text-16">
+                                <p className="text-black text-center text-16 flex-1">
                                     {item.description}
                                 </p>
                                 <p className="flex px-8-16 align-stretch justify-center rounded-full bg-red-dark text-white text-18 font-bold">

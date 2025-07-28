@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 const svgIcons = [
     <svg
         key="star-1"
@@ -56,196 +58,235 @@ const svgIcons = [
     </svg>,
 ];
 
-const countdown = [
-    { label: "Days", value: 61 },
-    { label: "Hours", value: 20 },
-    { label: "Minutes", value: 57 },
-    { label: "Seconds", value: 39 },
-];
+const EVENT_DATE = new Date('2025-09-22T19:00:00+05:30');
 
-const buttons = [
-    {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={25}
-                height={24}
-                viewBox="0 0 25 24"
-                fill="none"
-            >
-                <path
-                    d="M8.5 2V6"
-                    stroke="var(--color-gold)"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                ></path>
-                <path
-                    d="M16.5 2V6"
-                    stroke="var(--color-gold)"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-                <path
-                    d="M19.5 4H5.5C4.39543 4 3.5 4.89543 3.5 6V20C3.5 21.1046 4.39543 22 5.5 22H19.5C20.6046 22 21.5 21.1046 21.5 20V6C21.5 4.89543 20.6046 4 19.5 4Z"
-                    stroke="var(--color-gold)"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                ></path>
-                <path
-                    d="M3.5 10H21.5"
-                    stroke="var(--color-gold)"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-            </svg>
-        ),
-        text: "Event Schedule",
-        onClick: () => {
-            document.getElementById('Schedule')?.scrollIntoView({ behavior: 'smooth' });
-        },
-    },
-    {
-        icon: (
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={25}
-                height={24}
-                viewBox="0 0 25 24"
-                fill="none"
-            >
-                <path
-                    d="M15.977 12.8901L17.492 21.4161C17.509 21.5165 17.4949 21.6197 17.4516 21.7119C17.4084 21.8041 17.338 21.8808 17.2499 21.9319C17.1619 21.983 17.0603 22.006 16.9588 21.9978C16.8573 21.9897 16.7607 21.9507 16.682 21.8861L13.102 19.1991C12.9292 19.07 12.7192 19.0003 12.5035 19.0003C12.2878 19.0003 12.0778 19.07 11.905 19.1991L8.319 21.8851C8.24032 21.9496 8.14386 21.9885 8.04249 21.9967C7.94112 22.0049 7.83967 21.982 7.75166 21.931C7.66365 21.88 7.59327 21.8035 7.54991 21.7115C7.50656 21.6195 7.49228 21.5165 7.509 21.4161L9.023 12.8901"
-                    stroke="var(--color-gold)"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                ></path>
-                <path
-                    d="M12.5 14C15.8137 14 18.5 11.3137 18.5 8C18.5 4.68629 15.8137 2 12.5 2C9.18629 2 6.5 4.68629 6.5 8C6.5 11.3137 9.18629 14 12.5 14Z"
-                    stroke="var(--color-gold)"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                ></path>
-            </svg>
-        ),
-        text: "Sponsor This Event",
-        onClick: () => {
-            document.getElementById('Sponsors')?.scrollIntoView({ behavior: 'smooth' });
-        },
-    },
-];
+const Hero = () => {
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
 
-const Hero = () => (
-    <div id="Home" className="flex px-72-128 flex-col items-center gap-24 bg-red-dark HeroSection" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
-        <div className="flex items-center gap-16">
-            <div className="w-64 h-4 bg-gradient-gold-ltr" />
-            {svgIcons.map((icon) => icon)}
-            <div className="w-64 h-4 bg-gradient-gold-rtl" />
-        </div>
-        <p className="text-yellow text-center text-96 font-bold">
-            Chembur Ramleela 2025
-        </p>
-        <p className="text-gold text-center text-30 font-semibold">
-            Mumbai's Grandest Ramleela Since 1994
-        </p>
-        <div className="flex items-center gap-24 DateVenue">
-            <div className="flex items-center gap-8">
+    useEffect(() => {
+        const calculateTimeLeft = () => {
+            const now = new Date();
+            const difference = EVENT_DATE.getTime() - now.getTime();
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                setTimeLeft({ days, hours, minutes, seconds });
+            } else {
+                // Event has started
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            }
+        };
+
+        // Calculate immediately
+        calculateTimeLeft();
+
+        // Update every second
+        const timer = setInterval(calculateTimeLeft, 1000);
+
+        // Cleanup on unmount
+        return () => clearInterval(timer);
+    }, []);
+
+    const countdown = [
+        { label: "Days", value: timeLeft.days },
+        { label: "Hours", value: timeLeft.hours },
+        { label: "Minutes", value: timeLeft.minutes },
+        { label: "Seconds", value: timeLeft.seconds },
+    ];
+
+    const buttons = [
+        {
+            icon: (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width={24}
+                    width={25}
                     height={24}
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 25 24"
                     fill="none"
                 >
                     <path
-                        d="M8 2V6"
-                        stroke="var(--color-yellow)"
+                        d="M8.5 2V6"
+                        stroke="var(--color-gold)"
                         strokeWidth={2}
                         strokeLinecap="round"
                         strokeLinejoin="round"
                     ></path>
                     <path
-                        d="M16 2V6"
-                        stroke="var(--color-yellow)"
+                        d="M16.5 2V6"
+                        stroke="var(--color-gold)"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                    <path
+                        d="M19.5 4H5.5C4.39543 4 3.5 4.89543 3.5 6V20C3.5 21.1046 4.39543 22 5.5 22H19.5C20.6046 22 21.5 21.1046 21.5 20V6C21.5 4.89543 20.6046 4 19.5 4Z"
+                        stroke="var(--color-gold)"
                         strokeWidth={2}
                         strokeLinecap="round"
                         strokeLinejoin="round"
                     ></path>
                     <path
-                        d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
-                        stroke="var(--color-yellow)"
+                        d="M3.5 10H21.5"
+                        stroke="var(--color-gold)"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
+                </svg>
+            ),
+            text: "Event Schedule",
+            onClick: () => {
+                document.getElementById('Schedule')?.scrollIntoView({ behavior: 'smooth' });
+            },
+        },
+        {
+            icon: (
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={25}
+                    height={24}
+                    viewBox="0 0 25 24"
+                    fill="none"
+                >
+                    <path
+                        d="M15.977 12.8901L17.492 21.4161C17.509 21.5165 17.4949 21.6197 17.4516 21.7119C17.4084 21.8041 17.338 21.8808 17.2499 21.9319C17.1619 21.983 17.0603 22.006 16.9588 21.9978C16.8573 21.9897 16.7607 21.9507 16.682 21.8861L13.102 19.1991C12.9292 19.07 12.7192 19.0003 12.5035 19.0003C12.2878 19.0003 12.0778 19.07 11.905 19.1991L8.319 21.8851C8.24032 21.9496 8.14386 21.9885 8.04249 21.9967C7.94112 22.0049 7.83967 21.982 7.75166 21.931C7.66365 21.88 7.59327 21.8035 7.54991 21.7115C7.50656 21.6195 7.49228 21.5165 7.509 21.4161L9.023 12.8901"
+                        stroke="var(--color-gold)"
                         strokeWidth={2}
                         strokeLinecap="round"
                         strokeLinejoin="round"
                     ></path>
                     <path
-                        d="M3 10H21"
-                        stroke="var(--color-yellow)"
+                        d="M12.5 14C15.8137 14 18.5 11.3137 18.5 8C18.5 4.68629 15.8137 2 12.5 2C9.18629 2 6.5 4.68629 6.5 8C6.5 11.3137 9.18629 14 12.5 14Z"
+                        stroke="var(--color-gold)"
                         strokeWidth={2}
                         strokeLinecap="round"
                         strokeLinejoin="round"
                     ></path>
                 </svg>
-                <p className="text-yellow text-24">22 Sept – 2 Oct</p>
+            ),
+            text: "Sponsor This Event",
+            onClick: () => {
+                document.getElementById('Sponsors')?.scrollIntoView({ behavior: 'smooth' });
+            },
+        },
+    ];
+
+    return (
+        <div id="Home" className="flex px-72-128 flex-col items-center gap-24 bg-red-dark HeroSection" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
+            <div className="flex items-center gap-16">
+                <div className="w-64 h-4 bg-gradient-gold-ltr" />
+                {svgIcons.map((icon) => icon)}
+                <div className="w-64 h-4 bg-gradient-gold-rtl" />
             </div>
-            <div className="w-4 h-24 bg-yellow Hide" />
-            <div className="flex items-center gap-8">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                >
-                    <path
-                        d="M20 10C20 16 12 22 12 22C12 22 4 16 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z"
-                        stroke="var(--color-yellow)"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    ></path>
-                    <path
-                        d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                        stroke="var(--color-yellow)"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    ></path>
-                </svg>
-                <p className="text-yellow text-24">Gandhi Maidan, Chembur</p>
-            </div>
-        </div>
-        <div className="flex px-24 flex-col items-center gap-16 align-stretch rounded-16 border-1-gold bg-black-25">
-            <p className="align-stretch text-yellow text-center text-18">
-                Event Begins in:
+            <p className="text-yellow text-center text-96 font-bold">
+                Chembur Ramleela 2025
             </p>
-            <div className="flex gap-64 CountDown">
-                {countdown.map((item) => (
-                    <div className="flex flex-col items-center" key={item.label}>
-                        <p className="text-gold text-36 font-bold">{item.value}</p>
-                        <p className="text-yellow text-14">{item.label}</p>
+            <p className="text-gold text-center text-30 font-semibold">
+                Mumbai's Grandest Ramleela Since 1994
+            </p>
+            <div className="flex items-center gap-24 DateVenue">
+                <div className="flex items-center gap-8">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={24}
+                        height={24}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                    >
+                        <path
+                            d="M8 2V6"
+                            stroke="var(--color-yellow)"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        ></path>
+                        <path
+                            d="M16 2V6"
+                            stroke="var(--color-yellow)"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        ></path>
+                        <path
+                            d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
+                            stroke="var(--color-yellow)"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        ></path>
+                        <path
+                            d="M3 10H21"
+                            stroke="var(--color-yellow)"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        ></path>
+                    </svg>
+                    <p className="text-yellow text-24">22 Sept – 2 Oct</p>
+                </div>
+                <div className="w-4 h-24 bg-yellow Hide" />
+                <div className="flex items-center gap-8">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={24}
+                        height={24}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                    >
+                        <path
+                            d="M20 10C20 16 12 22 12 22C12 22 4 16 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z"
+                            stroke="var(--color-yellow)"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        ></path>
+                        <path
+                            d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                            stroke="var(--color-yellow)"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        ></path>
+                    </svg>
+                    <p className="text-yellow text-24">Gandhi Maidan, Chembur</p>
+                </div>
+            </div>
+            <div className="flex px-24 flex-col items-center gap-16 align-stretch rounded-16 border-1-gold bg-black-25">
+                <p className="align-stretch text-yellow text-center text-18">
+                    Event Begins in:
+                </p>
+                <div className="flex gap-64 CountDown">
+                    {countdown.map((item) => (
+                        <div className="flex flex-col items-center" key={item.label}>
+                            <p className="text-gold text-36 font-bold">{item.value}</p>
+                            <p className="text-yellow text-14">{item.label}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="flex items-center gap-24 Buttons">
+                {buttons.map((btn) => (
+                    <div
+                        className="flex px-20-40 items-center gap-16 rounded-full border-4-gold Button"
+                        key={btn.text}
+                        onClick={btn.onClick}
+                    >
+                        {btn.icon}
+                        <p className="text-gold text-20 font-bold">{btn.text}</p>
                     </div>
                 ))}
             </div>
         </div>
-        <div className="flex items-center gap-24 Buttons">
-            {buttons.map((btn) => (
-                <div
-                    className="flex px-20-40 items-center gap-16 rounded-full border-4-gold Button"
-                    key={btn.text}
-                    onClick={btn.onClick}
-                >
-                    {btn.icon}
-                    <p className="text-gold text-20 font-bold">{btn.text}</p>
-                </div>
-            ))}
-        </div>
-    </div>
-);
+    );
+};
 
 export default Hero;
