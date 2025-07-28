@@ -104,6 +104,9 @@ const buttons = [
             </svg>
         ),
         text: "Event Schedule",
+        onClick: () => {
+            document.getElementById('Schedule')?.scrollIntoView({ behavior: 'smooth' });
+        },
     },
     {
         icon: (
@@ -131,6 +134,9 @@ const buttons = [
             </svg>
         ),
         text: "Sponsor This Event",
+        onClick: () => {
+            document.getElementById('Sponsors')?.scrollIntoView({ behavior: 'smooth' });
+        },
     },
 ];
 
@@ -232,6 +238,7 @@ const Hero = () => (
                 <div
                     className="flex px-20-40 items-center gap-16 rounded-full border-4-gold Button"
                     key={btn.text}
+                    onClick={btn.onClick}
                 >
                     {btn.icon}
                     <p className="text-gold text-20 font-bold">{btn.text}</p>

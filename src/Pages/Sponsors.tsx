@@ -181,7 +181,11 @@ const Sponsors = () => (
                     </div>
                 ))}
             </div>
-            <div className="flex px-16-48 justify-center items-center gap-16 rounded-full border-4-gold Gallery Button">
+            <div className="flex px-16-48 justify-center items-center gap-16 rounded-full border-4-gold Gallery Button"
+                onClick={() => {
+                    document.getElementById('Contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={25}
