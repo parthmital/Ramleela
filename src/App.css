@@ -451,6 +451,18 @@ a {
     flex-shrink: 0;
 }
 
+.Date {
+    width: 75px;
+}
+
+.Info {
+    width: 320px;
+}
+
+.ScheduleButton {
+    width: 300px;
+}
+
 .Header {
     z-index: 1;
     position: fixed;
@@ -607,5 +619,11 @@ a {
     #DropDown,
     #Cancel {
         display: block;
+    }
+
+    .Date,
+    .Info,
+    .ScheduleButton {
+        width: max-content;
     }
 }

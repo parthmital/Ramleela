@@ -106,11 +106,11 @@ const Schedule = () => {
             <div className="flex flex-col gap-24 align-stretch">
                 {scheduleData.map((item, idx) => (
                     <div key={idx} className="flex px-32 items-center justify-between align-stretch rounded-8 border-4-red-dark RowToCol gap-16 Schedule Hover">
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 no-shrink Date">
                             <p className="text-red-dark text-24 font-bold">{item.day}</p>
                             <p className="text-black text-18">{item.date}</p>
                         </div>
-                        <div className="flex flex-col gap-8">
+                        <div className="flex flex-col gap-8 Info">
                             <p className="text-black text-24 font-bold">{item.title}</p>
                             <p className="text-black text-16">{item.description}</p>
                         </div>
@@ -128,7 +128,7 @@ const Schedule = () => {
                             </svg>
                             <p className="text-red-dark text-18 font-bold">{item.time}</p>
                         </div>
-                        <p className="flex px-12-24 rounded-full bg-gold text-red-dark text-18 font-bold justify-center">{item.tag}</p>
+                        <p className="flex px-12-24 rounded-full bg-gold text-red-dark text-18 font-bold justify-center no-shrink ScheduleButton">{item.tag}</p>
                     </div>
                 ))}
             </div>
