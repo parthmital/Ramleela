@@ -115,7 +115,7 @@ const Highlights = () => {
             </div>
             <div className="flex flex-col gap-24">
                 <div className="flex gap-24 RowToCol">
-                    <div className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white">
+                    <div className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white Hover">
                         <p className="text-red-dark text-center text-24 font-bold">
                             30-ft Ravana Effigy
                         </p>
@@ -127,7 +127,7 @@ const Highlights = () => {
                             30 feet tall
                         </p>
                     </div>
-                    <div className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white">
+                    <div className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white Hover">
                         <p className="text-red-dark text-center text-24 font-bold">
                             30-ft Ravana Effigy
                         </p>
@@ -139,7 +139,7 @@ const Highlights = () => {
                             30 feet tall
                         </p>
                     </div>
-                    <div className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white">
+                    <div className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white Hover">
                         <p className="text-red-dark text-center text-24 font-bold">
                             30-ft Ravana Effigy
                         </p>

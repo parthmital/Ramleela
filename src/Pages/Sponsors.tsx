@@ -79,7 +79,7 @@ const Sponsors = () => (
             </p>
         </div>
         <div className="flex justify-center gap-24 align-stretch RowToCol">
-            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white">
+            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white Hover">
                 <div className="flex flex-col justify-center items-center rounded-full bg-red-dark w-80 h-80">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ const Sponsors = () => (
                     Sponsor
                 </p>
             </div>
-            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white">
+            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white Hover">
                 <div className="flex flex-col justify-center items-center rounded-full bg-red-dark w-80 h-80">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ const Sponsors = () => (
                     Sponsor
                 </p>
             </div>
-            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white">
+            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white Hover">
                 <div className="flex flex-col justify-center items-center rounded-full bg-red-dark w-80 h-80">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +240,7 @@ const Sponsors = () => (
                     <p className="text-white text-center text-16">Years Legacy</p>
                 </div>
             </div>
-            <div className="flex px-16-48 justify-center items-center gap-16 rounded-full border-4-gold Gallery">
+            <div className="flex px-16-48 justify-center items-center gap-16 rounded-full border-4-gold Gallery Button">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={25}

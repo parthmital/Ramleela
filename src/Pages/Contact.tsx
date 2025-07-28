@@ -11,24 +11,24 @@ const Contact = () => (
         <div className="flex gap-64 align-stretch RowToCol">
             <div className="flex flex-col flex-1 align-stretch rounded-8 border-4-gold">
                 <div className="flex px-16 justify-center items-center align-stretch bg-red-bright">
-                    <p className="text-white text-center font-bold text-30">
+                    <p className="text-white text-center font-bold text-24">
                         Send us a Message
                     </p>
                 </div>
                 <div className="flex flex-col gap-32 align-stretch px-40">
-                    <p className="flex-1 text-black text-18 flex px-16 align-stretch rounded-8 border-4-red-bright bg-white">
+                    <p className="flex-1 text-black text-16 flex px-8 align-stretch rounded-8 border-4-red-bright bg-white">
                         Your Name
                     </p>
-                    <p className="flex-1 text-black text-18 flex px-16 align-stretch rounded-8 border-4-red-bright bg-white">
+                    <p className="flex-1 text-black text-16 flex px-8 align-stretch rounded-8 border-4-red-bright bg-white">
                         Email Address
                     </p>
-                    <p className="flex-1 text-black text-18 flex px-16 align-stretch rounded-8 border-4-red-bright bg-white">
+                    <p className="flex-1 text-black text-16 flex px-8 align-stretch rounded-8 border-4-red-bright bg-white">
                         Phone Number
                     </p>
-                    <p className="flex-1 text-black text-18 flex px-16 align-stretch rounded-8 border-4-red-bright bg-white">
+                    <p className="flex-1 text-black text-16 flex px-8 align-stretch rounded-8 border-4-red-bright bg-white">
                         Your Message / Sponsorship Inquiry
                     </p>
-                    <div className="flex px-16 justify-center items-center gap-16 align-stretch rounded-8 bg-red-bright">
+                    <div className="flex px-16 justify-center items-center gap-16 align-stretch rounded-8 bg-red-bright Hover">
                         <svg
                             fill="none"
                             height={24}
@@ -60,7 +60,7 @@ const Contact = () => (
             <div className="flex flex-col items-center gap-32 flex-1">
                 <div className="flex flex-col items-center align-stretch rounded-8 border-4-gold">
                     <div className="flex px-16 justify-center items-center align-stretch bg-red-bright">
-                        <p className="flex-1 text-yellow text-center font-bold text-30">
+                        <p className="flex-1 text-white text-center font-bold text-24">
                             Contact Information
                         </p>
                     </div>
@@ -106,7 +106,7 @@ const Contact = () => (
                             </div>
                             <div className="flex flex-col gap-4">
                                 <p className="text-yellow font-bold text-20">Event Organizer</p>
-                                <p className="text-yellow text-18">Kunal Agrawal</p>
+                                <p className="text-white text-16">Kunal Agrawal</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-24 align-stretch">
@@ -150,7 +150,7 @@ const Contact = () => (
                             </div>
                             <div className="flex flex-col gap-4">
                                 <p className="text-yellow font-bold text-20">Event Organizer</p>
-                                <p className="text-yellow text-18">Kunal Agrawal</p>
+                                <p className="text-white text-16">Kunal Agrawal</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-24 align-stretch">
@@ -194,7 +194,7 @@ const Contact = () => (
                             </div>
                             <div className="flex flex-col gap-4">
                                 <p className="text-yellow font-bold text-20">Event Organizer</p>
-                                <p className="text-yellow text-18">Kunal Agrawal</p>
+                                <p className="text-white text-16">Kunal Agrawal</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-24 align-stretch">
@@ -238,12 +238,12 @@ const Contact = () => (
                             </div>
                             <div className="flex flex-col gap-4">
                                 <p className="text-yellow font-bold text-20">Event Organizer</p>
-                                <p className="text-yellow text-18">Kunal Agrawal</p>
+                                <p className="text-white text-16">Kunal Agrawal</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="flex px-16-48 justify-center items-center gap-16 align-stretch rounded-8 border-4-gold bg-green">
+                <div className="flex px-16-48 justify-center items-center gap-16 align-stretch rounded-8 border-4-gold bg-green Hover">
                     <svg
                         fill="none"
                         height={24}
@@ -271,7 +271,7 @@ const Contact = () => (
                     </p>
                 </div>
                 <div className="flex w-300 h-48 justify-center items-center gap-24">
-                    <svg
+                    <svg className="Hover"
                         fill="none"
                         height={48}
                         viewBox="0 0 48 48"
@@ -294,7 +294,7 @@ const Contact = () => (
                             </clipPath>
                         </defs>
                     </svg>
-                    <svg
+                    <svg className="Hover"
                         fill="none"
                         height={48}
                         viewBox="0 0 48 48"
@@ -346,7 +346,7 @@ const Contact = () => (
                             </clipPath>
                         </defs>
                     </svg>
-                    <svg
+                    <svg className="Hover"
                         fill="none"
                         height={48}
                         viewBox="0 0 68 48"

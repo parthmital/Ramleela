@@ -22,7 +22,7 @@ const Schedule = () => {
                 <p className="text-black text-20 text-center">Each evening brings a new chapter of the timeless Ramayana to life</p>
             </div>
             <div className="flex flex-col gap-24 align-stretch">
-                <div className="flex px-32 items-center justify-between align-stretch rounded-8 border-4-red-dark RowToCol gap-16 Schedule">
+                <div className="flex px-32 items-center justify-between align-stretch rounded-8 border-4-red-dark RowToCol gap-16 Schedule Hover">
                     <div className="flex flex-col gap-4">
                         <p className="text-red-dark text-24 font-bold">Day 1</p>
                         <p className="text-black text-18">22 Sep</p>
@@ -47,7 +47,7 @@ const Schedule = () => {
                     </div>
                     <p className="flex px-12-24 rounded-full bg-gold text-red-dark text-18 font-bold justify-center">Grand Opening Ceremony</p>
                 </div>
-                <div className="flex px-32 items-center justify-between align-stretch rounded-8 border-4-red-dark RowToCol gap-16 Schedule">
+                <div className="flex px-32 items-center justify-between align-stretch rounded-8 border-4-red-dark RowToCol gap-16 Schedule Hover">
                     <div className="flex flex-col gap-4">
                         <p className="text-red-dark text-24 font-bold">Day 1</p>
                         <p className="text-black text-18">22 Sep</p>

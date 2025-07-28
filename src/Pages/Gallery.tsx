@@ -6,7 +6,7 @@ const Gallery = () => (
         </div>
         <div className="flex justify-center gap-24 flex-wrap">
             {[...Array(6)].map((_, i) => (
-                <div key={i} className="flex w-300 h-300 px-24 flex-col justify-end gap-8 rounded-8 border-4-gold Gallery">
+                <div key={i} className="flex w-300 h-300 px-24 flex-col justify-end gap-8 rounded-8 border-4-gold Gallery Hover">
                     <p className="text-white text-18 font-bold">Three Decades of Excellence</p>
                     <p className="text-gold text-14">Main Event</p>
                 </div>

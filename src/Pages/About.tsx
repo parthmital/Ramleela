@@ -36,7 +36,7 @@ const About = () => (
         </div>
         <div className="flex gap-64 align-stretch RowToCol">
             <div className="flex flex-col gap-32 w-min-content">
-                <div className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark">
+                <div className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark Hover">
                     <div className="flex items-center gap-16">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const About = () => (
                         enthusiasts from across Mumbai and beyond.
                     </p>
                 </div>
-                <div className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark">
+                <div className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark Hover">
                     <div className="flex items-center gap-16">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -83,21 +83,21 @@ const About = () => (
                     </p>
                 </div>
                 <div className="flex gap-24 whitespace-nowrap RowToCol">
-                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow">
+                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow Hover">
                         <p className="text-gold text-30 font-bold">30</p>
                         <p className="text-white text-14">Years of Excellence</p>
                     </div>
-                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow">
+                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow Hover">
                         <p className="text-gold text-30 font-bold">5000+</p>
                         <p className="text-white text-14">Nightly Attendees</p>
                     </div>
-                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow">
+                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow Hover">
                         <p className="text-gold text-30 font-bold">10</p>
                         <p className="text-white text-14">Days of Celebration</p>
                     </div>
                 </div>
             </div>
-            <div className="flex px-40 flex-col justify-end gap-24 flex-1 align-stretch rounded-8 border-4-red-dark min-h-500">
+            <div className="flex px-40 flex-col justify-end gap-24 flex-1 align-stretch rounded-8 border-4-red-dark min-h-500 Hover">
                 <p className="text-red-dark text-24 font-bold">
                     Three Decades of Excellence
                 </p>

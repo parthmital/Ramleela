@@ -29,11 +29,11 @@ const Header = () => (
             </div>
         </div>
         <div className="flex items-center gap-32 Hide">
-            <p className="text-yellow text-18 font-medium">About</p>
-            <p className="text-yellow text-18 font-medium">Schedule</p>
-            <p className="text-yellow text-18 font-medium">Gallery</p>
-            <p className="text-yellow text-18 font-medium">Sponsors</p>
-            <p className="text-yellow text-18 font-medium">Contact</p>
+            <p className="text-yellow text-18 font-medium HeaderButton">About</p>
+            <p className="text-yellow text-18 font-medium HeaderButton">Schedule</p>
+            <p className="text-yellow text-18 font-medium HeaderButton">Gallery</p>
+            <p className="text-yellow text-18 font-medium HeaderButton">Sponsors</p>
+            <p className="text-yellow text-18 font-medium HeaderButton">Contact</p>
         </div>
     </div>
 );

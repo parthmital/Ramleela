@@ -153,7 +153,7 @@ const Hero = () => (
             </div>
         </div>
         <div className="flex items-center gap-24 Buttons">
-            <div className="flex px-20-40 items-center gap-16 rounded-full border-4-gold">
+            <div className="flex px-20-40 items-center gap-16 rounded-full border-4-gold Button">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={25}
@@ -192,7 +192,7 @@ const Hero = () => (
                 </svg>
                 <p className="text-gold text-20 font-bold">Event Schedule</p>
             </div>
-            <div className="flex px-20-40 items-center gap-16 rounded-full border-4-gold">
+            <div className="flex px-20-40 items-center gap-16 rounded-full border-4-gold Button">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={25}
