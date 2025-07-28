@@ -67,7 +67,7 @@ const About = () => (
         </div>
         <div className="flex gap-64 align-stretch RowToCol">
             <div className="flex flex-col gap-32 w-min-content">
-                {infoCards.map((card, idx) => (
+                {infoCards.map((card) => (
                     <div key={card.title} className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark Hover">
                         <div className="flex items-center gap-16">
                             <svg

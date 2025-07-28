@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 
 const formFields = [
     { label: "Your Name" },
@@ -136,7 +136,7 @@ const Contact = () => (
                     </p>
                 </div>
                 <div className="flex flex-col gap-32 align-stretch px-40">
-                    {formFields.map((field, idx) => (
+                    {formFields.map((field) => (
                         <p
                             key={field.label}
                             className="flex-1 text-black text-16 flex px-8 align-stretch rounded-8 border-4-red-bright bg-white"
@@ -181,7 +181,7 @@ const Contact = () => (
                         </p>
                     </div>
                     <div className="flex flex-col gap-32 align-stretch px-40">
-                        {contactInfo.map((info, idx) => (
+                        {contactInfo.map((info) => (
                             <div key={info.title} className="flex items-center gap-24 align-stretch">
                                 <div className="flex w-48 h-48 flex-col justify-center items-center rounded-full bg-yellow no-shrink">
                                     {info.icon}
@@ -222,8 +222,8 @@ const Contact = () => (
                     </p>
                 </div>
                 <div className="flex w-300 h-48 justify-center items-center gap-24">
-                    {socialIcons.map((iconObj, idx) => (
-                        <React.Fragment key={idx}>{iconObj.icon}</React.Fragment>
+                    {socialIcons.map((iconObj) => (
+                        <Fragment>{iconObj.icon}</Fragment>
                     ))}
                 </div>
             </div>

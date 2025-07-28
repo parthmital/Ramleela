@@ -144,7 +144,7 @@ const Hero = () => (
     <div id="Home" className="flex px-72-128 flex-col items-center gap-24 bg-red-dark HeroSection" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
         <div className="flex items-center gap-16">
             <div className="w-64 h-4 bg-gradient-gold-ltr" />
-            {svgIcons.map((icon, idx) => icon)}
+            {svgIcons.map((icon) => icon)}
             <div className="w-64 h-4 bg-gradient-gold-rtl" />
         </div>
         <p className="text-yellow text-center text-96 font-bold">
@@ -234,7 +234,7 @@ const Hero = () => (
             </div>
         </div>
         <div className="flex items-center gap-24 Buttons">
-            {buttons.map((btn, idx) => (
+            {buttons.map((btn) => (
                 <div
                     className="flex px-20-40 items-center gap-16 rounded-full border-4-gold Button"
                     key={btn.text}

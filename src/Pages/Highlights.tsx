@@ -148,7 +148,7 @@ const Highlights = () => {
             <div className="flex flex-col gap-24">
                 {[0, 1].map(row => (
                     <div className="flex gap-24 RowToCol" key={row}>
-                        {highlightsData.slice(row * 3, row * 3 + 3).map((item, idx) => (
+                        {highlightsData.slice(row * 3, row * 3 + 3).map((item) => (
                             <div
                                 className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white Hover"
                                 key={item.title}
