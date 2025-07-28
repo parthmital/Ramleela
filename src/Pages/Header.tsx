@@ -12,6 +12,7 @@ const navItems = [
 
 const Header = () => {
     const [activeSection, setActiveSection] = useState(navItems[0]);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,8 +33,16 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
-        <div className="flex px-16-72 justify-between borderb-4-gold bg-red-dark Header">
+        <div className="flex items-center px-16-72 justify-between borderb-4-gold bg-red-dark Header">
             <div className="flex items-center gap-12">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +77,49 @@ const Header = () => {
                         key={item}
                         href={`#${item}`}
                         className={`text-yellow text-18 font-medium HeaderButton${activeSection === item ? ' active' : ''}`}
+                    >
+                        {item}
+                    </a>
+                ))}
+            </div>
+            {!isMobileMenuOpen && (
+                <svg
+                    id='DropDown'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    onClick={toggleMobileMenu}
+                    style={{ cursor: 'pointer' }}
+                >
+                    <path d="M5.33337 16H26.6667" stroke="#FEF9C3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M5.33337 8H26.6667" stroke="#FEF9C3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M5.33337 24H26.6667" stroke="#FEF9C3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            )}
+            {isMobileMenuOpen && (
+                <svg
+                    id='Cancel'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    onClick={closeMobileMenu}
+                    style={{ cursor: 'pointer' }}
+                >
+                    <path d="M24 8L8 24" stroke="#FEF9C3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M8 8L24 24" stroke="#FEF9C3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            )}
+            <div className={`borderb-4-gold MobileNav ${isMobileMenuOpen ? 'MobileNavOpen' : ''}`}>
+                {navItems.map((item) => (
+                    <a
+                        key={item}
+                        href={`#${item}`}
+                        className={`text-yellow text-18 font-medium HeaderButton${activeSection === item ? ' active' : ''}`}
+                        onClick={closeMobileMenu}
                     >
                         {item}
                     </a>
