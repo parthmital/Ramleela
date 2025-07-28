@@ -135,7 +135,7 @@ const buttons = [
 ];
 
 const Hero = () => (
-    <div className="flex px-72-128 flex-col items-center gap-24 bg-red-dark">
+    <div className="flex px-72-128 flex-col items-center gap-24 bg-red-dark HeroSection">
         <div className="flex items-center gap-16">
             <div className="w-64 h-4 bg-gradient-gold-ltr" />
             {svgIcons.map((icon, idx) => icon)}

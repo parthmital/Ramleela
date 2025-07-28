@@ -53,6 +53,7 @@
     --padding-24: 24px;
     --padding-32: 32px;
     --padding-40: 40px;
+    --padding-72: 72px;
     --padding-72-128: 72px 128px;
     --padding-93-128: 93px 128px;
 
@@ -437,6 +438,20 @@
     white-space: nowrap;
 }
 
+.no-shrink {
+    flex-shrink: 0;
+}
+
+.Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.HeroSection {
+    padding-top: calc(87.5px + var(--padding-72));
+}
+
 .HeaderButton:hover {
     cursor: pointer;
     color: var(--color-gold);
@@ -450,7 +465,7 @@
     background: var(--color-gold);
     transform: scale(1.05);
     transition: all 0.25s ease-in-out;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 1.5px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 1.5px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Button:hover * {
@@ -463,7 +478,7 @@
     cursor: pointer;
     transform: scale(1.025);
     transition: all 0.25s ease-in-out;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 1.5px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 1.5px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -479,9 +494,10 @@
         --padding-24: 16px;
         --padding-32: 16px;
         --padding-40: 16px;
+        --padding-72: 32px;
         --padding-16-72: 16px;
         --padding-16-48: 16px;
-        --padding-72-128: 16px;
+        --padding-72-128: 32px 16px;
         --padding-24-72: 16px;
     }
 

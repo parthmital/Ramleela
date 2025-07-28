@@ -1,3 +1,20 @@
+const sponsors = [
+    {
+        name: "Sahara Builders",
+        type: "Sponsor",
+    },
+    {
+        name: "Progressive Builders",
+        type: "Sponsor",
+    },
+];
+
+const stats = [
+    { value: "5000+", label: "Daily Audience" },
+    { value: "10", label: "Days Exposure" },
+    { value: "30", label: "Years Legacy" },
+];
+
 const Sponsors = () => (
     <div className="flex px-72-128 flex-col gap-72 bg-white">
         <div className="flex flex-col items-center gap-24 align-stretch">
@@ -79,120 +96,50 @@ const Sponsors = () => (
             </p>
         </div>
         <div className="flex justify-center gap-24 align-stretch RowToCol">
-            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white Hover">
-                <div className="flex flex-col justify-center items-center rounded-full bg-red-dark w-80 h-80">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={25}
-                        viewBox="0 0 24 25"
-                        fill="none"
-                    >
-                        <path
-                            d="M11.6667 22.4089C17.1895 22.4089 21.6667 17.9318 21.6667 12.4089C21.6667 6.88609 17.1895 2.40894 11.6667 2.40894C6.14382 2.40894 1.66667 6.88609 1.66667 12.4089C1.66667 17.9318 6.14382 22.4089 11.6667 22.4089Z"
-                            stroke="var(--color-gold)"
-                            strokeWidth="3.33333"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        ></path>
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={21}
-                        height={20}
-                        viewBox="0 0 21 20"
-                        fill="none"
-                    >
-                        <path
-                            d="M16.4607 2.40894L18.9857 16.6189C19.014 16.7863 18.9905 16.9582 18.9184 17.1119C18.8463 17.2655 18.729 17.3934 18.5822 17.4786C18.4354 17.5638 18.2662 17.6021 18.097 17.5885C17.9279 17.5748 17.7669 17.5099 17.6357 17.4023L11.669 12.9239C11.381 12.7087 11.0311 12.5925 10.6715 12.5925C10.312 12.5925 9.96205 12.7087 9.67401 12.9239L3.69734 17.4006C3.56621 17.508 3.40545 17.5728 3.2365 17.5865C3.06756 17.6002 2.89846 17.562 2.75178 17.477C2.6051 17.3921 2.4878 17.2645 2.41554 17.1112C2.34328 16.9578 2.31949 16.7861 2.34734 16.6189L4.87068 2.40894"
-                            stroke="var(--color-gold)"
-                            strokeWidth="3.33333"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        ></path>
-                    </svg>
+            {sponsors.map((sponsor, idx) => (
+                <div
+                    key={sponsor.name + idx}
+                    className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white Hover"
+                >
+                    <div className="flex flex-col justify-center items-center rounded-full bg-red-dark w-80 h-80">
+                        {/* SVGs for sponsor icon */}
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={24}
+                            height={25}
+                            viewBox="0 0 24 25"
+                            fill="none"
+                        >
+                            <path
+                                d="M11.6667 22.4089C17.1895 22.4089 21.6667 17.9318 21.6667 12.4089C21.6667 6.88609 17.1895 2.40894 11.6667 2.40894C6.14382 2.40894 1.66667 6.88609 1.66667 12.4089C1.66667 17.9318 6.14382 22.4089 11.6667 22.4089Z"
+                                stroke="var(--color-gold)"
+                                strokeWidth="3.33333"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            ></path>
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={21}
+                            height={20}
+                            viewBox="0 0 21 20"
+                            fill="none"
+                        >
+                            <path
+                                d="M16.4607 2.40894L18.9857 16.6189C19.014 16.7863 18.9905 16.9582 18.9184 17.1119C18.8463 17.2655 18.729 17.3934 18.5822 17.4786C18.4354 17.5638 18.2662 17.6021 18.097 17.5885C17.9279 17.5748 17.7669 17.5099 17.6357 17.4023L11.669 12.9239C11.381 12.7087 11.0311 12.5925 10.6715 12.5925C10.312 12.5925 9.96205 12.7087 9.67401 12.9239L3.69734 17.4006C3.56621 17.508 3.40545 17.5728 3.2365 17.5865C3.06756 17.6002 2.89846 17.562 2.75178 17.477C2.6051 17.3921 2.4878 17.2645 2.41554 17.1112C2.34328 16.9578 2.31949 16.7861 2.34734 16.6189L4.87068 2.40894"
+                                stroke="var(--color-gold)"
+                                strokeWidth="3.33333"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            ></path>
+                        </svg>
+                    </div>
+                    <p className="text-red-dark text-24 font-bold">{sponsor.name}</p>
+                    <p className="flex px-8-16 justify-center align-stretch rounded-full bg-red-dark text-white text-18 font-bold">
+                        {sponsor.type}
+                    </p>
                 </div>
-                <p className="text-red-dark text-24 font-bold">Sahara Builders</p>
-                <p className="flex px-8-16 justify-center align-stretch rounded-full bg-red-dark text-white text-18 font-bold">
-                    Sponsor
-                </p>
-            </div>
-            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white Hover">
-                <div className="flex flex-col justify-center items-center rounded-full bg-red-dark w-80 h-80">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={25}
-                        viewBox="0 0 24 25"
-                        fill="none"
-                    >
-                        <path
-                            d="M11.6667 22.4089C17.1895 22.4089 21.6667 17.9318 21.6667 12.4089C21.6667 6.88609 17.1895 2.40894 11.6667 2.40894C6.14382 2.40894 1.66667 6.88609 1.66667 12.4089C1.66667 17.9318 6.14382 22.4089 11.6667 22.4089Z"
-                            stroke="var(--color-gold)"
-                            strokeWidth="3.33333"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        ></path>
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={21}
-                        height={20}
-                        viewBox="0 0 21 20"
-                        fill="none"
-                    >
-                        <path
-                            d="M16.4607 2.40894L18.9857 16.6189C19.014 16.7863 18.9905 16.9582 18.9184 17.1119C18.8463 17.2655 18.729 17.3934 18.5822 17.4786C18.4354 17.5638 18.2662 17.6021 18.097 17.5885C17.9279 17.5748 17.7669 17.5099 17.6357 17.4023L11.669 12.9239C11.381 12.7087 11.0311 12.5925 10.6715 12.5925C10.312 12.5925 9.96205 12.7087 9.67401 12.9239L3.69734 17.4006C3.56621 17.508 3.40545 17.5728 3.2365 17.5865C3.06756 17.6002 2.89846 17.562 2.75178 17.477C2.6051 17.3921 2.4878 17.2645 2.41554 17.1112C2.34328 16.9578 2.31949 16.7861 2.34734 16.6189L4.87068 2.40894"
-                            stroke="var(--color-gold)"
-                            strokeWidth="3.33333"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        ></path>
-                    </svg>
-                </div>
-                <p className="text-red-dark text-24 font-bold">Sahara Builders</p>
-                <p className="flex px-8-16 justify-center align-stretch rounded-full bg-red-dark text-white text-18 font-bold">
-                    Sponsor
-                </p>
-            </div>
-            <div className="flex px-32 flex-col items-center gap-24 flex-1 rounded-8 border-4-red-dark bg-white Hover">
-                <div className="flex flex-col justify-center items-center rounded-full bg-red-dark w-80 h-80">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={25}
-                        viewBox="0 0 24 25"
-                        fill="none"
-                    >
-                        <path
-                            d="M11.6667 22.4089C17.1895 22.4089 21.6667 17.9318 21.6667 12.4089C21.6667 6.88609 17.1895 2.40894 11.6667 2.40894C6.14382 2.40894 1.66667 6.88609 1.66667 12.4089C1.66667 17.9318 6.14382 22.4089 11.6667 22.4089Z"
-                            stroke="var(--color-gold)"
-                            strokeWidth="3.33333"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        ></path>
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={21}
-                        height={20}
-                        viewBox="0 0 21 20"
-                        fill="none"
-                    >
-                        <path
-                            d="M16.4607 2.40894L18.9857 16.6189C19.014 16.7863 18.9905 16.9582 18.9184 17.1119C18.8463 17.2655 18.729 17.3934 18.5822 17.4786C18.4354 17.5638 18.2662 17.6021 18.097 17.5885C17.9279 17.5748 17.7669 17.5099 17.6357 17.4023L11.669 12.9239C11.381 12.7087 11.0311 12.5925 10.6715 12.5925C10.312 12.5925 9.96205 12.7087 9.67401 12.9239L3.69734 17.4006C3.56621 17.508 3.40545 17.5728 3.2365 17.5865C3.06756 17.6002 2.89846 17.562 2.75178 17.477C2.6051 17.3921 2.4878 17.2645 2.41554 17.1112C2.34328 16.9578 2.31949 16.7861 2.34734 16.6189L4.87068 2.40894"
-                            stroke="var(--color-gold)"
-                            strokeWidth="3.33333"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        ></path>
-                    </svg>
-                </div>
-                <p className="text-red-dark text-24 font-bold">Sahara Builders</p>
-                <p className="flex px-8-16 justify-center align-stretch rounded-full bg-red-dark text-white text-18 font-bold">
-                    Sponsor
-                </p>
-            </div>
+            ))}
         </div>
         <div className="flex px-24 flex-col justify-center items-center gap-32 align-stretch rounded-16 border-4-gold bg-red-dark">
             <svg
@@ -227,18 +174,12 @@ const Sponsors = () => (
                 </p>
             </div>
             <div className="flex justify-center items-center gap-128 RowToCol RemoveGap">
-                <div className="flex flex-col">
-                    <p className="text-gold text-center text-30 font-bold">5000+</p>
-                    <p className="text-white text-center text-16">Daily Audience</p>
-                </div>
-                <div className="flex flex-col">
-                    <p className="text-gold text-center text-30 font-bold">10</p>
-                    <p className="text-white text-center text-16">Days Exposure</p>
-                </div>
-                <div className="flex flex-col">
-                    <p className="text-gold text-center text-30 font-bold">30</p>
-                    <p className="text-white text-center text-16">Years Legacy</p>
-                </div>
+                {stats.map((stat, idx) => (
+                    <div className="flex flex-col" key={stat.label + idx}>
+                        <p className="text-gold text-center text-30 font-bold">{stat.value}</p>
+                        <p className="text-white text-center text-16">{stat.label}</p>
+                    </div>
+                ))}
             </div>
             <div className="flex px-16-48 justify-center items-center gap-16 rounded-full border-4-gold Gallery Button">
                 <svg
@@ -269,4 +210,4 @@ const Sponsors = () => (
     </div>
 );
 
-export default Sponsors
+export default Sponsors;

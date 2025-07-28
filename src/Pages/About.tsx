@@ -2,7 +2,7 @@ const infoCards = [
     {
         title: "Since 1994",
         content: [
-            <>The Chembur Ramlila stands as Mumbai's most prestigious and continuously-held Ramlila, proudly organized by the&nbsp;<span className="text-black text-18 font-bold">Shree Maryada Purushottam Ramleela Samiti</span>&nbsp;for over three decades.</>,
+            <>The Chembur Ramleela stands as Mumbai's most prestigious and continuously-held Ramleela, proudly organized by the&nbsp;<span className="text-black text-18 font-bold">Shree Maryada Purushottam Ramleela Samiti</span>&nbsp;for over three decades.</>,
             <>What began as a humble community initiative has evolved into a grand cultural spectacle that attracts thousands of devotees and culture enthusiasts from across Mumbai and beyond.</>,
         ],
     },

@@ -7,7 +7,7 @@ const navItems = [
 ];
 
 const Header = () => (
-    <div className="flex px-16-72 justify-between borderb-4-gold bg-red-dark">
+    <div className="flex px-16-72 justify-between borderb-4-gold bg-red-dark Header">
         <div className="flex items-center gap-12">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
