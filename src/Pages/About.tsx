@@ -1,3 +1,34 @@
+const infoCards = [
+    {
+        title: "Since 1994",
+        content: [
+            <>The Chembur Ramlila stands as Mumbai's most prestigious and continuously-held Ramlila, proudly organized by the&nbsp;<span className="text-black text-18 font-bold">Shree Maryada Purushottam Ramleela Samiti</span>&nbsp;for over three decades.</>,
+            <>What began as a humble community initiative has evolved into a grand cultural spectacle that attracts thousands of devotees and culture enthusiasts from across Mumbai and beyond.</>,
+        ],
+    },
+    {
+        title: "Cultural Impact",
+        content: [
+            <>Our commitment to authenticity, combined with spectacular production values, has made this event the cornerstone of Chembur's cultural calendar and a beacon of traditional Indian values in modern Mumbai.</>,
+        ],
+    },
+];
+
+const stats = [
+    {
+        value: "30",
+        label: "Years of Excellence",
+    },
+    {
+        value: "5000+",
+        label: "Nightly Attendees",
+    },
+    {
+        value: "10",
+        label: "Days of Celebration",
+    },
+];
+
 const About = () => (
     <div className="flex px-72-128 flex-col gap-72 bg-white">
         <div className="flex flex-col items-center gap-24">
@@ -36,65 +67,32 @@ const About = () => (
         </div>
         <div className="flex gap-64 align-stretch RowToCol">
             <div className="flex flex-col gap-32 w-min-content">
-                <div className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark Hover">
-                    <div className="flex items-center gap-16">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={16}
-                            height={16}
-                            viewBox="0 0 16 16"
-                            fill="none"
-                        >
-                            <circle cx={8} cy={8} r={8} fill="var(--color-red-dark)" />
-                        </svg>
-                        <p className="text-red-dark text-24 font-bold">Since 1994</p>
+                {infoCards.map((card, idx) => (
+                    <div key={card.title} className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark Hover">
+                        <div className="flex items-center gap-16">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width={16}
+                                height={16}
+                                viewBox="0 0 16 16"
+                                fill="none"
+                            >
+                                <circle cx={8} cy={8} r={8} fill="var(--color-red-dark)" />
+                            </svg>
+                            <p className="text-red-dark text-24 font-bold">{card.title}</p>
+                        </div>
+                        {card.content.map((text, i) => (
+                            <p className="text-black text-18" key={i}>{text}</p>
+                        ))}
                     </div>
-                    <p className="text-black text-18">
-                        The Chembur Ramlila stands as Mumbai's most prestigious and
-                        continuously-held Ramlila, proudly organized by the&nbsp;
-                        <span className="text-black text-18 font-bold">
-                            Shree Maryada Purushottam Ramleela Samiti
-                        </span>
-                        &nbsp;for over three decades.
-                    </p>
-                    <p className="text-black text-18">
-                        What began as a humble community initiative has evolved into a grand
-                        cultural spectacle that attracts thousands of devotees and culture
-                        enthusiasts from across Mumbai and beyond.
-                    </p>
-                </div>
-                <div className="flex px-40 flex-col gap-24 rounded-8 border-4-red-dark Hover">
-                    <div className="flex items-center gap-16">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={16}
-                            height={16}
-                            viewBox="0 0 16 16"
-                            fill="none"
-                        >
-                            <circle cx={8} cy={8} r={8} fill="var(--color-red-dark)" />
-                        </svg>
-                        <p className="text-red-dark text-24 font-bold">Cultural Impact</p>
-                    </div>
-                    <p className="text-black text-18">
-                        Our commitment to authenticity, combined with spectacular production
-                        values, has made this event the cornerstone of Chembur's cultural
-                        calendar and a beacon of traditional Indian values in modern Mumbai.
-                    </p>
-                </div>
+                ))}
                 <div className="flex gap-24 whitespace-nowrap RowToCol">
-                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow Hover">
-                        <p className="text-gold text-30 font-bold">30</p>
-                        <p className="text-white text-14">Years of Excellence</p>
-                    </div>
-                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow Hover">
-                        <p className="text-gold text-30 font-bold">5000+</p>
-                        <p className="text-white text-14">Nightly Attendees</p>
-                    </div>
-                    <div className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow Hover">
-                        <p className="text-gold text-30 font-bold">10</p>
-                        <p className="text-white text-14">Days of Celebration</p>
-                    </div>
+                    {stats.map((stat) => (
+                        <div key={stat.label} className="flex px-24 flex-col items-center gap-8 rounded-8 bg-red-dark justify-center ColToRow Hover">
+                            <p className="text-gold text-30 font-bold">{stat.value}</p>
+                            <p className="text-white text-14">{stat.label}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="flex px-40 flex-col justify-end gap-24 flex-1 align-stretch rounded-8 border-4-red-dark min-h-500 Hover">

@@ -1,3 +1,11 @@
+const navItems = [
+    "About",
+    "Schedule",
+    "Gallery",
+    "Sponsors",
+    "Contact"
+];
+
 const Header = () => (
     <div className="flex px-16-72 justify-between borderb-4-gold bg-red-dark">
         <div className="flex items-center gap-12">
@@ -29,11 +37,9 @@ const Header = () => (
             </div>
         </div>
         <div className="flex items-center gap-32 Hide">
-            <p className="text-yellow text-18 font-medium HeaderButton">About</p>
-            <p className="text-yellow text-18 font-medium HeaderButton">Schedule</p>
-            <p className="text-yellow text-18 font-medium HeaderButton">Gallery</p>
-            <p className="text-yellow text-18 font-medium HeaderButton">Sponsors</p>
-            <p className="text-yellow text-18 font-medium HeaderButton">Contact</p>
+            {navItems.map((item: string) => (
+                <p key={item} className="text-yellow text-18 font-medium HeaderButton">{item}</p>
+            ))}
         </div>
     </div>
 );
