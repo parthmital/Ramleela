@@ -82,7 +82,7 @@ const Schedule = () => {
         },
     ];
     return (
-        <div className="flex px-72-128 flex-col gap-72 bg-white">
+        <div id="Schedule" className="flex px-72-128 flex-col gap-72 bg-white" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
             <div className="flex flex-col items-center gap-24">
                 <div className="flex items-center gap-16">
                     <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} viewBox="0 0 40 40" style={{ stroke: 'var(--color-red-dark)' }} fill="none">

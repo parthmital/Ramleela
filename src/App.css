@@ -71,6 +71,7 @@
     --radius-8: 8px;
     --radius-16: 16px;
     --radius-full: 9999px;
+    --scroll-margin-header: 87.5px;
 }
 
 * {
@@ -80,6 +81,14 @@
     font-family: var(--font-family-main);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-125);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    all: unset;
 }
 
 .align-stretch {
@@ -443,16 +452,25 @@
 }
 
 .Header {
+    z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
 .HeroSection {
-    padding-top: calc(87.5px + var(--padding-72));
+    padding-top: calc(var(--scroll-margin-header) + var(--padding-72));
 }
 
 .HeaderButton:hover {
+    cursor: pointer;
+    color: var(--color-gold);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    transition: all 0.25s ease-in-out;
+}
+
+.HeaderButton.active {
     cursor: pointer;
     color: var(--color-gold);
     text-decoration: underline;

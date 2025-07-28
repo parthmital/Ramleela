@@ -32,7 +32,7 @@ const Highlights = () => {
         },
     ];
     return (
-        <div className="flex px-72-128 flex-col items-center gap-72 bg-red-dark">
+        <div id="Highlights" className="flex px-72-128 flex-col items-center gap-72 bg-red-dark" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
             <div className="flex flex-col items-center gap-24">
                 <div className="flex items-center gap-16">
                     <svg

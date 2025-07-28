@@ -16,7 +16,7 @@ const stats = [
 ];
 
 const Sponsors = () => (
-    <div className="flex px-72-128 flex-col gap-72 bg-white">
+    <div id="Sponsors" className="flex px-72-128 flex-col gap-72 bg-white" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
         <div className="flex flex-col items-center gap-24 align-stretch">
             <div className="flex justify-center items-center content-center gap-16 align-stretch flex-wrap">
                 <svg

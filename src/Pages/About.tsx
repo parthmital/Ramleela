@@ -30,7 +30,7 @@ const stats = [
 ];
 
 const About = () => (
-    <div className="flex px-72-128 flex-col gap-72 bg-white">
+    <div id="About" className="flex px-72-128 flex-col gap-72 bg-white" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
         <div className="flex flex-col items-center gap-24">
             <div className="flex items-center gap-16">
                 <div className="w-64 h-4 bg-gradient-red-dark-ltr" />

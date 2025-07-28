@@ -1,5 +1,5 @@
 const Gallery = () => (
-    <div className="flex px-72-128 flex-col items-center gap-72 bg-red-dark">
+    <div id="Gallery" className="flex px-72-128 flex-col items-center gap-72 bg-red-dark" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
         <div className="flex flex-col gap-24">
             <p className="text-yellow text-center text-72 font-bold">Moments of Glory</p>
             <p className="text-white text-center text-20">Relive the magic and grandeur of our previous celebrations</p>

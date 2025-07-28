@@ -119,7 +119,7 @@ const socialIcons = [
 ];
 
 const Contact = () => (
-    <div className="flex flex-col items-center gap-72 px-72-128 bg-red-dark">
+    <div id="Contact" className="flex flex-col items-center gap-72 px-72-128 bg-red-dark" style={{ scrollMarginTop: 'var(--scroll-margin-header)' }}>
         <div className="flex flex-col items-center gap-24 align-stretch">
             <p className="align-stretch text-yellow text-center font-bold text-72">
                 Connect With Us
