@@ -95,13 +95,12 @@ const About = () => (
                     ))}
                 </div>
             </div>
-            <div className="flex px-40 flex-col justify-end gap-24 flex-1 align-stretch rounded-8 border-4-red-dark min-h-500 Hover">
-                <p className="text-red-dark text-24 font-bold">
-                    Three Decades of Excellence
-                </p>
-                <p className="text-black text-18">
-                    Preserving traditions for future generations
-                </p>
+            <div className="flex px-40 flex-col justify-end gap-24 flex-1 align-stretch rounded-8 border-4-red-dark min-h-500 Hover"
+                style={{
+                    backgroundImage: 'url(Images/1.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}>
             </div>
         </div>
     </div>

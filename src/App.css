@@ -42,18 +42,18 @@
     --gap-72: 72px;
     --gap-128: 128px;
 
-    --padding-8-16: 8px 16px;
-    --padding-12-24: 12px 24px;
-    --padding-16-48: 16px 48px;
-    --padding-16-72: 16px 72px;
-    --padding-20-40: 16px 32px;
-    --padding-24-72: 24px 72px;
     --padding-8: 8px;
     --padding-16: 16px;
     --padding-24: 24px;
     --padding-32: 32px;
     --padding-40: 40px;
     --padding-72: 72px;
+    --padding-8-16: 8px 16px;
+    --padding-12-24: 12px 24px;
+    --padding-16-48: 16px 48px;
+    --padding-16-72: 16px 72px;
+    --padding-20-40: 16px 32px;
+    --padding-24-72: 24px 72px;
     --padding-72-128: 72px 128px;
     --padding-93-128: 93px 128px;
 
@@ -541,20 +541,21 @@ a {
     :root {
         --font-size-72: 60px;
         --font-size-96: 60px;
-        --gap-16: 16px;
-        --gap-24: 16px;
-        --gap-32: 16px;
-        --gap-64: 16px;
-        --gap-72: 16px;
 
-        --padding-24: 16px;
-        --padding-32: 16px;
-        --padding-40: 16px;
-        --padding-72: 32px;
-        --padding-16-72: 16px;
+        --gap-24: 16px;
+        --gap-32: 32px;
+        --gap-64: 32px;
+        --gap-72: 32px;
+        --gap-128: 32px;
+
+        --padding-32: 24px;
+        --padding-40: 24px;
+        --padding-72: 24px;
+
         --padding-16-48: 16px;
-        --padding-72-128: 32px 16px;
+        --padding-16-72: 16px;
         --padding-24-72: 16px;
+        --padding-72-128: 32px 16px;
     }
 
     .CountDown {
