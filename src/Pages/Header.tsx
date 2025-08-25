@@ -6,8 +6,6 @@ const navItems = [
     "Highlights",
     "Schedule",
     "Gallery",
-    "Sponsors",
-    "Contact"
 ];
 
 const Header = () => {

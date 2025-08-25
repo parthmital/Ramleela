@@ -148,36 +148,6 @@ const Hero = () => {
                 document.getElementById('Schedule')?.scrollIntoView({ behavior: 'smooth' });
             },
         },
-        {
-            icon: (
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={25}
-                    height={24}
-                    viewBox="0 0 25 24"
-                    fill="none"
-                >
-                    <path
-                        d="M15.977 12.8901L17.492 21.4161C17.509 21.5165 17.4949 21.6197 17.4516 21.7119C17.4084 21.8041 17.338 21.8808 17.2499 21.9319C17.1619 21.983 17.0603 22.006 16.9588 21.9978C16.8573 21.9897 16.7607 21.9507 16.682 21.8861L13.102 19.1991C12.9292 19.07 12.7192 19.0003 12.5035 19.0003C12.2878 19.0003 12.0778 19.07 11.905 19.1991L8.319 21.8851C8.24032 21.9496 8.14386 21.9885 8.04249 21.9967C7.94112 22.0049 7.83967 21.982 7.75166 21.931C7.66365 21.88 7.59327 21.8035 7.54991 21.7115C7.50656 21.6195 7.49228 21.5165 7.509 21.4161L9.023 12.8901"
-                        stroke="var(--color-gold)"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    ></path>
-                    <path
-                        d="M12.5 14C15.8137 14 18.5 11.3137 18.5 8C18.5 4.68629 15.8137 2 12.5 2C9.18629 2 6.5 4.68629 6.5 8C6.5 11.3137 9.18629 14 12.5 14Z"
-                        stroke="var(--color-gold)"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    ></path>
-                </svg>
-            ),
-            text: "Sponsor This Event",
-            onClick: () => {
-                document.getElementById('Sponsors')?.scrollIntoView({ behavior: 'smooth' });
-            },
-        },
     ];
 
     return (

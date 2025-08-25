@@ -4,8 +4,6 @@ import About from './Pages/About'
 import Highlights from './Pages/Highlights'
 import Schedule from './Pages/Schedule'
 import Gallery from './Pages/Gallery'
-import Sponsors from './Pages/Sponsors'
-import Contact from './Pages/Contact'
 import Footer from './Pages/Footer'
 import './App.css'
 
@@ -18,8 +16,6 @@ function App() {
       <Highlights />
       <Schedule />
       <Gallery />
-      <Sponsors />
-      <Contact />
       <Footer />
     </>
   )
