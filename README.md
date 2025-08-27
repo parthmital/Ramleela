@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# Chembur Ramleela Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official website for the Chembur Ramleela, a grand cultural event in Mumbai celebrating the timeless epic of the Ramayana.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View the live website here](https://parthmital.github.io/Ramleela/)
 
-## Expanding the ESLint configuration
+## 📜 About the Project
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project is a single-page application built with React and Vite to provide information about the Chembur Ramleela event. It showcases the event's schedule, highlights, history, and a gallery of past celebrations.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+*   **Event Countdown:** A real-time countdown to the start of the event.
+*   **Detailed Schedule:** A comprehensive 11-day schedule of the Ramleela performances.
+*   **Event Highlights:** Key attractions of the event, such as the 30-ft Ravana effigy and live stage drama.
+*   **Rich History:** Information about the legacy of the Chembur Ramleela, which has been running since 1994.
+*   **Photo Gallery:** A collection of images from previous years' celebrations.
+*   **Smooth Navigation:** A sticky header with smooth scrolling to different sections of the page.
+*   **Responsive Design:** A mobile-friendly layout for easy viewing on all devices.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Technologies Used
+
+*   **Frontend:** React, TypeScript, Vite
+*   **Styling:** CSS (with a utility-first approach, likely Tailwind CSS based on class names)
+*   **Deployment:** GitHub Pages
+
+## 📦 Setup and Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/parthmital/Ramleela.git
+    ```
+2.  **Navigate to the project directory:**
+    ```bash
+    cd Ramleela
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`.
+
+## scripts-available
+
+*   `npm run dev`: Starts the development server.
+*   `npm run build`: Builds the application for production.
+*   `npm run lint`: Lints the codebase for errors.
+*   `npm run preview`: Serves the production build locally for preview.
+*   `npm run deploy`: Deploys the application to GitHub Pages.
+
+## 📂 Project Structure
+
+```
+.
+├── public/
+│   ├── Images/
+│   └── ...
+├── src/
+│   ├── Pages/
+│   │   ├── About.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Gallery.tsx
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Highlights.tsx
+│   │   └── Schedule.tsx
+│   ├── App.css
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── ...
+├── .gitignore
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🤝 Contributing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Contributions are welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or find any bugs.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📄 License
+
+This project is licensed under the MIT License.
