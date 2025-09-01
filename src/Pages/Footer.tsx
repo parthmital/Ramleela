@@ -6,25 +6,25 @@ const Footer = () => (
     </p>
     <div className="flex gap-24 SocialIcons">
       <a
-        href="https://mail.google.com/mail/?view=cm&to=chemburramlila@gmail.com"
+        href="mailto:chemburramlila@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="public/Gmail.svg" alt="Gmail" />
+        <img src="Social/Gmail.svg" alt="Gmail" />
       </a>
       <a
-        href="https://web.whatsapp.com/send?phone=919029058600&text=Hello%20I%20want%20to%20know%20more%20about%20Chembur%20Ramleela"
+        href="https://wa.me/919029058600"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="public/WhatsApp.svg" alt="WhatsApp" />
+        <img src="Social/WhatsApp.svg" alt="WhatsApp" />
       </a>
       <a
         href="upi://pay?pa=maryadapurshottam@indianbk&pn=ChemburRamleela"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="public/GPay.svg" alt="Google Pay" />
+        <img src="Social/GPay.svg" alt="Google Pay" />
       </a>
     </div>
   </div>
