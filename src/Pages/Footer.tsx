@@ -4,7 +4,14 @@ const Footer = () => (
       ©2025 Chembur Ramleela. All rights reserved. Organized by Shree Maryada
       Purushottam Ramleela Samiti
     </p>
-    <div className="flex gap-24 SocialIcons">
+    <div className="flex gap-24 SocialIcons items-center">
+      <a
+        href="https://www.youtube.com/@ramlilasamitichembur"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="Social/YouTube.svg" alt="Watch us on YouTube" />
+      </a>
       <a
         href="mailto:chemburramlila@gmail.com"
         target="_blank"

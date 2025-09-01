@@ -537,8 +537,8 @@ a {
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 1.5px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.SocialIcons {
-    height: 48px;
+.SocialIcons img {
+    width: 48px;
 }
 
 .SocialIcons img:hover {
