@@ -1,40 +1,61 @@
 const Highlights = () => {
   const highlightsData = [
     {
-      title: "30-ft Ravana Effigy",
+      title: "Free Public Celebration",
       description:
-        "Spectacular burning of the massive handcrafted effigy on the final night",
-      badge: "30 feet tall",
+        "Open to all with free entry, covered seating, daily prasad, and kiosks for refreshments.",
+      badge: "Community",
+    },
+    {
+      title: "Grand Stage & Audience Arrangements",
+      description:
+        "Dedicated VIP stage, seating for thousands, and special appreciation for sahyogis & dignitaries.",
+      badge: "Hospitality",
+    },
+    {
+      title: "Cultural & Spiritual Heritage",
+      description:
+        "Temple notice boards, annual calendar distribution, and authentic traditions preserved.",
+      badge: "Tradition",
+    },
+    {
+      title: "Spectacular Ravan Dahan",
+      description:
+        "The climax with the burning of the massive effigy, Mumbai’s biggest Ramleela moment.",
+      badge: "Main Event",
+    },
+    {
+      title: "Unique Performances",
+      description:
+        "First-time ever: Ramayan Kaleen Mahavidya Deviyan presented by artists - a historic cultural act.",
+      badge: "First in India",
+    },
+    {
+      title: "Visual Splendor",
+      description:
+        "Flying Hanuman at the gates and beautifully illuminated trees add to the grandeur.",
+      badge: "Spectacle",
+    },
+    {
+      title: "Modern Touch with Tradition",
+      description:
+        "QR codes for donations and seamless organization with emergency medical services.",
+      badge: "Digital + Care",
     },
     {
       title: "Live Stage Drama",
       description:
-        "Professional actors in authentic costumes with traditional music",
-      badge: "10 nights",
-    },
-    {
-      title: "Massive Audience",
-      description:
-        "Thousands gather nightly to witness this cultural spectacle",
-      badge: "5000+ nightly",
+        "Professional actors in authentic costumes with traditional music.",
+      badge: "11 Nights",
     },
     {
       title: "31-Year Legacy",
       description:
-        "Mumbai's most prestigious and continuous Ramleela tradition",
+        "Mumbai’s most prestigious and continuous Ramleela tradition since 1994.",
       badge: "Since 1994",
     },
-    {
-      title: "Free Public Access",
-      description: "Open to all families - a true community celebration",
-      badge: "No tickets",
-    },
-    {
-      title: "Cultural Heritage",
-      description: "Preserving and promoting traditional Indian values",
-      badge: "Authentic",
-    },
   ];
+
   return (
     <div
       id="Highlights"
@@ -51,26 +72,28 @@ const Highlights = () => {
         </p>
       </div>
       <div className="flex flex-col gap-24">
-        {[0, 1].map((row) => (
-          <div className="flex gap-24 RowToCol" key={row}>
-            {highlightsData.slice(row * 3, row * 3 + 3).map((item) => (
-              <div
-                className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white Hover"
-                key={item.title}
-              >
-                <p className="text-red-dark text-center text-24 font-bold">
-                  {item.title}
-                </p>
-                <p className="text-black text-center text-16 flex-1">
-                  {item.description}
-                </p>
-                <p className="flex px-8-16 align-stretch justify-center rounded-full bg-red-dark text-white text-18 font-bold">
-                  {item.badge}
-                </p>
-              </div>
-            ))}
-          </div>
-        ))}
+        {Array.from({ length: Math.ceil(highlightsData.length / 3) }).map(
+          (_, row) => (
+            <div className="flex gap-24 RowToCol" key={row}>
+              {highlightsData.slice(row * 3, row * 3 + 3).map((item) => (
+                <div
+                  className="flex px-32 flex-col gap-24 flex-1 rounded-8 border-4-gold bg-white Hover"
+                  key={item.title}
+                >
+                  <p className="text-red-dark text-center text-24 font-bold">
+                    {item.title}
+                  </p>
+                  <p className="text-black text-center text-16 flex-1">
+                    {item.description}
+                  </p>
+                  <p className="flex px-8-16 align-stretch justify-center rounded-full bg-red-dark text-white text-18 font-bold">
+                    {item.badge}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )
+        )}
       </div>
     </div>
   );

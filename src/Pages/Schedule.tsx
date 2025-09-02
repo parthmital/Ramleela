@@ -97,7 +97,7 @@ const Schedule = () => {
     >
       <div className="flex flex-col items-center gap-24">
         <p className="text-red-dark text-72 font-bold text-center">
-          10 Days of Epic Drama
+          11 Days of Epic Drama
         </p>
         <p className="text-black text-20 text-center">
           Each evening brings a new chapter of the timeless Ramayana to life

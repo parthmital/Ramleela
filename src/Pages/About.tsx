@@ -39,7 +39,7 @@ const stats = [
     label: "Nightly Attendees",
   },
   {
-    value: "10",
+    value: "11",
     label: "Days of Celebration",
   },
 ];
