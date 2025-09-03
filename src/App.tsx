@@ -8,17 +8,17 @@ import Footer from "./Pages/Footer";
 import "./App.css";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <About />
-      <Highlights />
-      <Schedule />
-      <Gallery />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<Hero />
+			<About />
+			<Highlights />
+			<Schedule />
+			<Gallery />
+			<Footer />
+		</>
+	);
 }
 
 export default App;
