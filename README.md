@@ -80,11 +80,3 @@ This project is a single-page application built with React and Vite to provide i
 ├── README.md
 └── vite.config.ts
 ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or find any bugs.
-
-## 📄 License
-
-This project is licensed under the MIT License.
