@@ -1,5 +1,5 @@
-import { event } from "../content/event";
-import type { Night } from "../content/programme";
+import { event } from "../content/event.ts";
+import type { Night } from "../content/programme.ts";
 
 const DAY_MS = 86_400_000;
 const MONTHS = [

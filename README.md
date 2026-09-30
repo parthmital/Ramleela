@@ -6,10 +6,10 @@ A single-page React app that shows the season's dates and venue, a live season s
 
 ## Stack
 
-- React 19, TypeScript, Vite 7
+- React 19, TypeScript, Vite 8
 - Plain CSS with design tokens (`src/styles/tokens.css`), one stylesheet per component
 - Self-hosted fonts via Fontsource: Tiro Devanagari Hindi (display) and Mukta (body)
-- Vitest, ESLint, Prettier
+- Vitest 5, ESLint 10 (flat config), Prettier
 
 ## Getting started
 
@@ -31,6 +31,19 @@ npm run dev       # http://localhost:5173
 | `npm run lint`                    | Lint with ESLint                               |
 | `npm run format` / `format:check` | Format or check formatting with Prettier       |
 | `npm run check`                   | Format check, lint, tests and build (as in CI) |
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs on every push to `main` and on every pull request:
+
+- **check:** `npm ci`, `npm run check`, then `npm audit --audit-level=moderate`
+- **secrets:** gitleaks scan of the full Git history
+
+To reproduce CI locally, run `npm ci && npm run check && npm audit --audit-level=moderate`.
+
+The repository stores and checks out text files with LF line endings (see `.gitattributes`), so the Prettier check behaves the same on Windows as in CI. If an older clone shows formatting errors on every file, re-check out every tracked file from Git Bash with `git ls-files -z | xargs -0 rm -f && git checkout -- .`. This discards uncommitted changes, so commit or stash first.
+
+Dependabot opens weekly npm and monthly GitHub Actions update PRs. Minor and patch development-tool updates are grouped into one PR; each major version bump gets its own PR, because majors can break config (for example, ESLint 10 needed `eslint-plugin-react-hooks` to use its flat preset). Merge an update PR only after CI passes on it.
 
 ## Updating for a new season
 

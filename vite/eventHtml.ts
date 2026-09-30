@@ -1,7 +1,7 @@
 import type { HtmlTagDescriptor, Plugin } from "vite";
-import { event, eventTitle } from "../src/content/event";
-import { programme } from "../src/content/programme";
-import { formatDateRange } from "../src/programme/season";
+import { event, eventTitle } from "../src/content/event.ts";
+import { programme } from "../src/content/programme.ts";
+import { formatDateRange } from "../src/programme/season.ts";
 
 // Static hosting cannot set response headers, so the policy ships as a meta
 // tag. `frame-ancestors` is ignored in meta and must be set by the host.

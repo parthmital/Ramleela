@@ -3,7 +3,7 @@ import {
 	contentSecurityPolicy,
 	renderEventHtml,
 	toInlineJson,
-} from "./eventHtml";
+} from "./eventHtml.ts";
 
 describe("renderEventHtml", () => {
 	it("fills event tokens and leaves unknown ones untouched", () => {
