@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 /public/Ramleela Photos
 *.pdf
+# Local agent tooling
+.agent-local/

@@ -1,0 +1,38 @@
+.section-heading {
+	display: grid;
+	gap: var(--space-3);
+	max-width: 40rem;
+	margin-bottom: var(--space-7);
+}
+
+.section-heading__eyebrow {
+	display: flex;
+	align-items: center;
+	gap: var(--space-3);
+	color: var(--kumkum);
+}
+
+.section-heading__eyebrow::before {
+	content: "";
+	width: 1.5rem;
+	height: 1px;
+	background: currentColor;
+}
+
+.section-heading__title {
+	font-size: var(--text-3xl);
+}
+
+.section-heading__lede {
+	color: var(--ash);
+	font-size: var(--text-lg);
+	line-height: 1.5;
+}
+
+:is(.section--dark, .section--kumkum) .section-heading__eyebrow {
+	color: var(--marigold);
+}
+
+:is(.section--dark, .section--kumkum) .section-heading__lede {
+	color: var(--on-dark-muted);
+}

@@ -1,0 +1,61 @@
+:root {
+	/* Colour: night stage, kumkum red, marigold, paper. */
+	--night: #1c1311;
+	--night-raised: #2a1d19;
+	--night-deep: #140d0b;
+	--kumkum: #9b1c1c;
+	--kumkum-deep: #5e1212;
+	--marigold: #eaa21a;
+	--marigold-soft: #f7d48a;
+	--paper: #fbf8f4;
+	--paper-sunk: #f3ede5;
+	--ink: #221917;
+	--ash: #6b5e57;
+	--line: #e6ddd3;
+	--on-dark: #f6eee5;
+	--on-dark-muted: #c2b1a5;
+	--line-dark: rgb(246 238 229 / 0.14);
+
+	/* Type */
+	--font-display: "Tiro Devanagari Hindi", Georgia, "Times New Roman", serif;
+	--font-body:
+		"Mukta", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	--text-xs: 0.8125rem;
+	--text-sm: 0.9375rem;
+	--text-md: 1.0625rem;
+	--text-lg: 1.25rem;
+	--text-xl: 1.5rem;
+	--text-2xl: 2rem;
+	--text-3xl: 2.5rem;
+	--text-4xl: 3.25rem;
+	--text-5xl: 4rem;
+
+	/* Space (4px base) */
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.5rem;
+	--space-6: 2rem;
+	--space-7: 3rem;
+	--space-8: 4rem;
+	--space-9: 6rem;
+
+	--radius-sm: 6px;
+	--radius-md: 10px;
+	--radius-pill: 999px;
+
+	--header-height: 4rem;
+	--container: 72rem;
+	--gutter: 1.25rem;
+	--ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+	:root {
+		--gutter: 2rem;
+		--text-3xl: 3rem;
+		--text-4xl: 4rem;
+		--text-5xl: 5.25rem;
+	}
+}

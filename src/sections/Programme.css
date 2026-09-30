@@ -1,0 +1,166 @@
+.programme-section {
+	background: var(--paper-sunk);
+}
+
+.programme {
+	border-top: 2px solid var(--ink);
+}
+
+/* Mobile: number | stacked details. */
+.night {
+	position: relative;
+	display: grid;
+	grid-template-columns: 3rem minmax(0, 1fr);
+	grid-template-areas:
+		"num date"
+		"num story"
+		"num time"
+		"num tag";
+	column-gap: var(--space-4);
+	row-gap: var(--space-1);
+	padding: var(--space-5) 0;
+	border-bottom: 1px solid var(--line);
+}
+
+.night__number {
+	grid-area: num;
+	color: var(--kumkum);
+	font-family: var(--font-display);
+	font-size: var(--text-2xl);
+	line-height: 1;
+	font-variant-numeric: tabular-nums;
+}
+
+.night__date {
+	grid-area: date;
+	color: var(--ash);
+	font-size: var(--text-sm);
+	font-weight: 500;
+}
+
+.night__date span {
+	color: var(--ink);
+	font-weight: 600;
+}
+
+.night__story {
+	grid-area: story;
+	min-width: 0;
+}
+
+.night__status {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2);
+	margin-bottom: var(--space-1);
+	color: var(--kumkum);
+}
+
+.night__status::before {
+	content: "";
+	width: 0.45rem;
+	height: 0.45rem;
+	border-radius: 50%;
+	background: currentColor;
+}
+
+.night[data-state="live"] .night__status::before {
+	animation: pulse 1.6s var(--ease) infinite;
+}
+
+.night__title {
+	font-size: var(--text-xl);
+	line-height: 1.2;
+}
+
+.night__episode {
+	color: var(--ash);
+}
+
+.night__time {
+	grid-area: time;
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2);
+	color: var(--ink);
+	font-size: var(--text-sm);
+	font-weight: 500;
+	font-variant-numeric: tabular-nums;
+}
+
+.night__time svg {
+	color: var(--kumkum);
+	flex-shrink: 0;
+}
+
+.night__tag {
+	grid-area: tag;
+	justify-self: start;
+	margin-top: var(--space-1);
+	padding: 0.125rem var(--space-3);
+	border: 1px solid color-mix(in srgb, var(--kumkum) 35%, transparent);
+	border-radius: var(--radius-pill);
+	color: var(--kumkum);
+	font-size: var(--text-xs);
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	white-space: nowrap;
+}
+
+/* States */
+.night[data-state="done"] > * {
+	opacity: 0.5;
+}
+
+.night:is([data-state="live"], [data-state="next"]) {
+	background: var(--paper);
+	box-shadow: inset 3px 0 0 var(--marigold);
+	padding-left: var(--space-4);
+	margin-inline: calc(-1 * var(--space-4)) 0;
+}
+
+.night[data-state="live"] .night__tag,
+.night[data-state="next"] .night__tag {
+	border-color: var(--marigold);
+	background: var(--marigold);
+	color: var(--night);
+}
+
+/* Desktop: a single playbill row. */
+@media (min-width: 900px) {
+	.night {
+		grid-template-columns: 4rem 8rem minmax(0, 1fr) 11rem 9.5rem;
+		grid-template-areas: "num date story time tag";
+		align-items: center;
+		column-gap: var(--space-5);
+		padding: var(--space-5) var(--space-2);
+	}
+
+	.night__number {
+		font-size: var(--text-3xl);
+	}
+
+	.night__date span {
+		display: block;
+		color: var(--ash);
+		font-size: var(--text-xs);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.night__date {
+		color: var(--ink);
+		font-size: var(--text-md);
+		font-weight: 600;
+	}
+
+	.night__tag {
+		justify-self: end;
+		margin-top: 0;
+	}
+
+	.night:is([data-state="live"], [data-state="next"]) {
+		padding-left: var(--space-5);
+		margin-left: calc(-1 * var(--space-3));
+	}
+}

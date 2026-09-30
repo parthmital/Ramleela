@@ -20,4 +20,22 @@ export default tseslint.config([
 			globals: globals.browser,
 		},
 	},
+	{
+		// Pure data and time logic: shared with the build plugin and tests.
+		files: ["src/content/**", "src/programme/**"],
+		rules: {
+			"no-restricted-imports": [
+				"error",
+				{
+					patterns: [
+						"react",
+						"react-dom",
+						"**/sections/*",
+						"**/components/*",
+						"**/hooks/*",
+					],
+				},
+			],
+		},
+	},
 ]);

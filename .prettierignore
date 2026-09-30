@@ -1,0 +1,4 @@
+dist
+.agent-local
+package-lock.json
+public

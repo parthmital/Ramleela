@@ -1,0 +1,46 @@
+.gallery {
+	display: grid;
+	gap: var(--space-3);
+	grid-auto-rows: 14rem;
+}
+
+.gallery__item {
+	overflow: hidden;
+	border-radius: var(--radius-md);
+	background: var(--night-raised);
+}
+
+.gallery__item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.6s var(--ease);
+}
+
+.gallery__item:hover img {
+	transform: scale(1.03);
+}
+
+@media (min-width: 640px) {
+	.gallery {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.gallery__item:first-child {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+}
+
+/* Seven photos: one feature tile, four singles, two wide tiles. */
+@media (min-width: 960px) {
+	.gallery {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		grid-auto-rows: 13.5rem;
+	}
+
+	.gallery__item:nth-child(6),
+	.gallery__item:nth-child(7) {
+		grid-column: span 2;
+	}
+}
